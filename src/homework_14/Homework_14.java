@@ -1,11 +1,11 @@
 package homework_14;
 
-public class homework_14 {
+public class Homework_14 {
     public static void main(String[] args) {
         int[] massiv = new int[]{1, 2, 3, 4, 8, 10, 12, 13, 15, 20};
         int summa;
         summa = sumOdd(massiv);
-        System.out.println("Сумма четных чисел= " + summa);
+        System.out.println("Сумма четных чисел = " + summa);
 
     }
 

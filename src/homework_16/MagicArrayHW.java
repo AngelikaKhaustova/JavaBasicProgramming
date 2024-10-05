@@ -1,8 +1,8 @@
 package homework_16;
 
 public class MagicArrayHW {
-    int[] array;
-    int cursor;
+    private int[] array;
+    private int cursor;
 
     public MagicArrayHW() {
         array = new int[10];
@@ -14,7 +14,7 @@ public class MagicArrayHW {
     }
 
 
-    void add(int value) {
+    public void add(int value) {
         if (cursor == array.length - 1) {
             expandArray();
         }
@@ -22,7 +22,7 @@ public class MagicArrayHW {
         cursor++;
     }
 
-    void add(int... numbers) {
+    public void add(int... numbers) {
         for (int i = 0; i < numbers.length; i++) {
             add(numbers[i]);
         }
@@ -31,7 +31,7 @@ public class MagicArrayHW {
     }
 
 
-    void expandArray() {
+    private void expandArray() {
         System.out.println("Расширяем массив, курсор= " + cursor);
         int[] newArray = new int[array.length * 2];
         for (int i = 0; i < cursor; i++) {
@@ -54,42 +54,59 @@ public class MagicArrayHW {
 
     }
 
-    int size() {
+    public int size() {
         return cursor;
     }
 
-    int getByInd(int index) {
+    public int getByInd(int index) {
         if (index >= 0 && index < cursor) {
             return array[index];
         }
         return Integer.MIN_VALUE;
     }
 
-    int getByVal(int value) {
+    public int indexOf(int value) {
         int res = -1;
         for (int i = 0; i < cursor; i++) {
             if (array[i] == value) {
                 res = i;
+                return res;
             }
         }
-
-        return res;
+        return -1;
     }
 
-    boolean remove(int index) {
-        if (index >= 0 && index < cursor) {
-            array[index] = 0;
-            return true;
+    public int indexOfLast(int value) {        //Task 2 HW 17
+        int res = -1;
+        for (int i = cursor; i >= 0; i--) {
+            if (array[i] == value) {
+                res = i;
+                return res;
+            }
         }
-        return false;
+        return -1;
     }
 
-    boolean remove2(int value) {
-        int ind = getByVal(value);
-        if(ind==-1){
+    public int remove(int index) {
+        if (index >= 0 && index < cursor) {
+            int value = array[index];
+            for (int i = index; i < cursor - 1; i++) {
+                array[i] = array[i + 1];
+            }
+            cursor--;
+            return value;
+        } else {
+            return Integer.MIN_VALUE;
+        }
+
+    }
+
+    public boolean remove2(int value) {
+        int ind = indexOf(value);
+        if (ind == -1) {
             return false;
         }
-        array[ind] = 0;
+        remove(ind);
         return true;
 
     }

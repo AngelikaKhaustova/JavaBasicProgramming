@@ -10,12 +10,15 @@ public class TestArrayHW {
         magicArrayHW.add(30);
         System.out.println(" now" + magicArrayHW);
 
-        magicArrayHW.add(50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150);
+        magicArrayHW.add(50, 60, 70, 80, 90, 100, 110, 120, 130, 80, 140, 150);
 
         System.out.println(magicArrayHW.toString());
 
-        System.out.println("Индекс числа 80 = " + magicArrayHW.getByVal(80));
-        System.out.println("Индекс числа 81 = " + magicArrayHW.getByVal(81));
+        System.out.println("Индекс числа 80 = " + magicArrayHW.indexOf(80));
+        System.out.println("Индекс числа 81 = " + magicArrayHW.indexOf(81));
+        // Task 2 HW 17
+        System.out.println("Индекс последнего вхождения числа 80 = " + magicArrayHW.indexOfLast(80));
+        System.out.println("Индекс последнего вхождения числа 81 = " + magicArrayHW.indexOfLast(81));
 
         System.out.println("По индексу 10 находится число: " + magicArrayHW.getByInd(10));
 
@@ -29,8 +32,10 @@ public class TestArrayHW {
         System.out.println("Массив созданный внутри конструктора: " + arr.toString());
 
         System.out.println("Удалось удалить элемент со значением 115 = " + arr.remove2(115));
-        System.out.println("Удалось удалить элемент со значением 20 = " + arr.remove2(20));
+        System.out.println("Удалось удалить элемент со значением 21 = " + arr.remove2(21));
         System.out.println("Массив после удаления: " + arr.toString());
+
+
 
 
 

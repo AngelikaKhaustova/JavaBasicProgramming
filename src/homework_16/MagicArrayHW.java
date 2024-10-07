@@ -78,7 +78,7 @@ public class MagicArrayHW {
 
     public int indexOfLast(int value) {        //Task 2 HW 17
         int res = -1;
-        for (int i = cursor; i >= 0; i--) {
+        for (int i = cursor - 1; i >= 0; i--) {
             if (array[i] == value) {
                 res = i;
                 return res;

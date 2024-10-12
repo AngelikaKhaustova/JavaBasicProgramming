@@ -1,9 +1,9 @@
 package lesson_15;
 
 public class Cat { // cat
-    String name;
-    String color;
-    int age;
+    public String name;
+    public String color;
+    public int age;
 
     public Cat(){
 
@@ -15,7 +15,9 @@ public class Cat { // cat
 
     }
 
-
+    public void whoAmI() {
+        System.out.printf("Я котик %s, мой возраст: %d, мой окрас: %s\n", this.name, age, color);
+    }
 
     public void sleep(){
         System.out.println(" I m sleep");

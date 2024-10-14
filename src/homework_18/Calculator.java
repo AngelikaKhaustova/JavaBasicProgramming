@@ -1,4 +1,4 @@
-package homwork_18;
+package homework_18;
 
 public class Calculator {
     private static final float PI = 3.141592F; // HW 19 Task 1

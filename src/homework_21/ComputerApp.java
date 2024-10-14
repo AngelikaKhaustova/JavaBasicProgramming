@@ -1,4 +1,4 @@
-package homwork_21;
+package homework_21;
 
 public class ComputerApp {
     public static void main(String[] args) {

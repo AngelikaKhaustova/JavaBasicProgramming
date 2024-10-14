@@ -1,6 +1,4 @@
-package homwork_18;
-
-import java.util.Scanner;
+package homework_18;
 
 public class CalculatorApp {
     public static void main(String[] args) {

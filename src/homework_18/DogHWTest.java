@@ -1,4 +1,4 @@
-package homwork_18;
+package homework_18;
 
 public class DogHWTest {
     public static void main(String[] args) {

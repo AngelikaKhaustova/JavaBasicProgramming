@@ -1,4 +1,4 @@
-package homwork_18;
+package homework_18;
 
 public class DogHW_18 {
     private String name;

@@ -1,4 +1,4 @@
-package homwork_21;
+package homework_21;
 
 public class Storage extends Component {
     public Storage(String brand, String model) {

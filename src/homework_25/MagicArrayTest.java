@@ -4,7 +4,7 @@ import homework_16.MagicArrayHW;
 
 public class MagicArrayTest {
     public static void main(String[] args) {
-        MagicArray magicArray = new MagicArray();
+        MagicArray<Integer> magicArray = new MagicArray();
         magicArray.add(10);
         magicArray.add(20);
         magicArray.add(30);
@@ -31,13 +31,13 @@ public class MagicArrayTest {
 
         System.out.println("Массив созданный внутри конструктора: " + arr.toString());
 
-        System.out.println("Удалось удалить элемент со значением 115 = " + arr.remove2(115));
-        System.out.println("Удалось удалить элемент со значением 21 = " + arr.remove2(21));
+        System.out.println("Удалось удалить элемент со значением 115 = " + arr.remove(115));
+        System.out.println("Удалось удалить элемент со значением 21 = " + arr.remove(21));
         System.out.println("Массив после удаления: " + arr.toString());
 
         System.out.println("----------------- Массив String--------");
 
-        MagicArray magicArray2 = new MagicArray();
+        MagicArray<String> magicArray2 = new MagicArray();
         magicArray2.add("10");
         magicArray2.add("20");
         magicArray2.add("30");
@@ -48,7 +48,7 @@ public class MagicArrayTest {
         System.out.println(magicArray2.toString());
 
         System.out.println("Индекс строки 80 = " + magicArray2.indexOf("80"));
-        System.out.println("Индекс числа 80 = " + magicArray2.indexOf(80) + ". Это массив строк. Число не найдено");
+        System.out.println("Индекс строки 81 = " + magicArray2.indexOf("81") + ". Это массив строк. Число не найдено");
         // Task 2 HW 17
         System.out.println("Индекс последнего вхождения строки 80 = " + magicArray2.indexOfLast("80"));
         System.out.println("Индекс последнего вхождения строки 81 = " + magicArray2.indexOfLast("81"));

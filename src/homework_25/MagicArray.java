@@ -127,7 +127,7 @@ public class MagicArray<T> {
         return -1;
     }
 
-    public boolean remove2(T value) {
+    public boolean remove(T value) {
         int ind = indexOf(value);
         if (ind == -1) {
             return false;

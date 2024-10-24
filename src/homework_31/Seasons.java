@@ -6,7 +6,6 @@ public enum Seasons {
     SUMMER("Лето", 25.7),
     AUTUMN("Весна", 8.0);
 
-
     private String russian;
     private double avgTemp;
 

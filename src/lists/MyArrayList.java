@@ -1,6 +1,7 @@
 package lists;
 
 import java.lang.reflect.Array;
+import java.util.Iterator;
 
 public class MyArrayList<T> implements MyList<T> {
     private T[] array;
@@ -238,6 +239,31 @@ public class MyArrayList<T> implements MyList<T> {
 //        }
 
 
+    }
+
+    @Override
+    public Iterator<T> iterator() {
+        return new MyIterator();
+
+    }
+    private class MyIterator implements Iterator<T>{
+        int currentIndex=0;
+
+
+        @Override
+        public boolean hasNext() {
+            return currentIndex<cursor;
+
+
+        }
+
+        @Override
+        public T next() {
+           // T value=array[currentIndex];
+          //  currentIndex++;
+          //  return value;
+            return array[currentIndex++];
+        }
     }
 }
 

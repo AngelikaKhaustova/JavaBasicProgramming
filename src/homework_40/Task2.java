@@ -29,6 +29,5 @@ public class Task2 {
         result.addAll(set1);
         result.removeAll(set2);
         return result;
-
     }
 }

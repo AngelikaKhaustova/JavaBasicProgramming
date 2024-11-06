@@ -20,4 +20,5 @@ public class Task1 {
         Set<String> uniqueWords = new LinkedHashSet<>(Arrays.asList(words));
         return new ArrayList<>(uniqueWords);
     }
+
 }

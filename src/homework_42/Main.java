@@ -33,7 +33,7 @@ public class Main {
 
         Map<Integer, Integer> result = new HashMap<>();
         for (String word : words) {
-            Integer amount = result.getOrDefault(word.length(), 0);
+            Integer amount = result.getOrDefault(word.length(), 0) ;
             result.put(word.length(), ++amount);
         }
         return result.getOrDefault(lengthToCount, 0);
